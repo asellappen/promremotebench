@@ -1,5 +1,8 @@
 sudo: required
 # language: go
+go:
+  - "1.10.x"
+  
 arch: ppc64le
 
 services:
@@ -7,6 +10,9 @@ services:
 
 script:
   - bash ./promremotebench_ubi8.2.sh
+  - go vet
+  
+  
 
 #addons:
 #  apt:
