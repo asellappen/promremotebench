@@ -1,0 +1,18 @@
+sudo: required
+language: go
+
+go:
+  - "1.10.x"
+
+addons:
+  apt:
+    packages:
+      # Install the latest version of Docker.
+      - docker-ce
+
+services:
+  - docker
+
+script:
+  - ./promremotebench_ubi8.2.sh
+  
