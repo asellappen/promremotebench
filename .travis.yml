@@ -9,8 +9,8 @@ arch: ppc64le
 #      # Install the latest version of Docker.
 #      - docker-ce
 
-services:
-  - docker
+#services:
+#  - docker
 
 script:
   - ./promremotebench_ubi8.2.sh
