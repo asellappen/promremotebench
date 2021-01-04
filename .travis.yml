@@ -3,11 +3,11 @@ language: go
 arch: ppc64le
 
 
-addons:
-  apt:
-    packages:
-      # Install the latest version of Docker.
-      - docker-ce
+#addons:
+#  apt:
+#    packages:
+#      # Install the latest version of Docker.
+#      - docker-ce
 
 services:
   - docker
