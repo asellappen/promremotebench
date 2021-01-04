@@ -1,8 +1,7 @@
 sudo: required
 language: go
+arch: ppc64le
 
-go:
-  - "1.10.x"
 
 addons:
   apt:
