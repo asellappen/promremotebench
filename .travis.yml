@@ -2,6 +2,11 @@ sudo: required
 # language: go
 arch: ppc64le
 
+services:
+  - docker
+
+script:
+  - bash ./promremotebench_ubi8.2.sh
 
 #addons:
 #  apt:
@@ -12,6 +17,4 @@ arch: ppc64le
 #services:
 #  - docker
 
-script:
-  - ./promremotebench_ubi8.2.sh
   
