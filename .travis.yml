@@ -1,24 +1,25 @@
-sudo: required
-language: go
-go:
-  - 1.13
-  
-arch: ppc64le
+# ----------------------------------------------------------------------------
+#
+# Package             : promremotebench
+# Source Repo         : https://github.com/m3dbx/promremotebench
+# Travis Job Link     : https://travis-ci.com/github/asellappen/promremotebench/
+# Created travis.yml  : Yes
+# Maintainer          : Arumugam N S <asellappen@yahoo.com> / Priya Seth<sethp@us.ibm.com>
+#
+# Script License      : Apache License, Version 2 or later
+#
+# ----------------------------------------------------------------------------
 
-services:
-  - docker
+language: go
+
+arch:
+# - amd64
+ - ppc64le
+  
+go:
+ - 1.15
+
 
 script:
-  - bash ./promremotebench_ubi8.2.sh
-  
-
-#addons:
-#  apt:
-#    packages:
-#      # Install the latest version of Docker.
-#      - docker-ce
-
-#services:
-#  - docker
-
-  
+ - go get -v -t -d ./...
+ - go test ./…
