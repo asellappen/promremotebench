@@ -22,8 +22,11 @@ go:
 
 script:
 # - go get -v -t -d ./...
-# - go test ./…
-- export PATH=`pwd`/go/bin:$PATH
-- export GOPATH=`pwd`/gopath
-- cd src
-- go build ./cmd/promremotebench
+## - go test ./…
+#- export PATH=`pwd`/go/bin:$PATH
+#- export GOPATH=`pwd`/gopath
+#- cd src
+#- go build ./cmd/promremotebench
+ - export PATH=${PATH}:`go env GOPATH`/bin
+ - go build -v ./...
+ - go test -v ./...
