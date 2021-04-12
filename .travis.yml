@@ -18,3 +18,5 @@ arch:
   
 go:
  - 1.15
+script:
+ - sh promremotebench_ubi8.2.sh
